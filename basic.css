@@ -7,7 +7,17 @@
 }
 
 #title_name {
-	text-align: center;
+    position: relative;
+    text-align: center;
+}
+
+#change_ques {
+
+}
+
+#logo {
+    height: 100px;
+    wigth: 100px;
 }
 
 button::-moz-focus-inner {
@@ -777,4 +787,3 @@ div.project-info:after {
   visibility: hidden;
   width: 0;
   height: 0; }
-
