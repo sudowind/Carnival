@@ -7,5 +7,15 @@
 }
 
 #title_name {
-	position: center;
+	position: relative;
+	text-align: center;
+}
+
+#change_ques {
+
+}
+
+#logo {
+	height: 100px;
+	wigth: 100px;
 }
