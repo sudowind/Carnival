@@ -23,6 +23,15 @@ qa_repo =
 	['在记事本或写字板窗口中，对当前编辑的文档进行存储，可以用什么快捷键？', 'Ctrl+S']
 ]
 
+function change_question() {
+	document.getElementById('question').innerText="换了一道题";
+	document.getElementById('answer').hidden="hidden";
+}
+
+function show_answer() {
+	document.getElementById('answer').hidden="";
+}
+
 function show_questions() {
 	var content = "";
 	for (var i = 0; i < qa_repo.length; ++i) {
