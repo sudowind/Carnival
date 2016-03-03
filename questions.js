@@ -1,5 +1,4 @@
-qa_repo = 
-[
+qa_repo = [
 	['简述摩尔定律？','当价格不变时，集成电路上可容纳的元器件的数目，约每隔18-24个月便会增加一倍，性能也将提升一倍。换言之，每一美元所能买到的电脑性能，将每隔18-24个月翻一倍以上。(意思对即可)'],
 	['ThinkPad曾经是哪个公司的电脑品牌？ ','IBM'],
 	['众所周知，NVIDIA显卡是众多游戏发烧友的挚爱，请问N卡中的GTX960m的m是什么意思？','m是指专为笔记本设计的显卡，由于笔记本的显卡在散热，重量，大小方面要求高于台式机，GTX6960m就是相对于GTX960阉割之后的显卡（意思靠谱即可）'],
@@ -28,8 +27,8 @@ function change_question() {
 	document.getElementById('answer').hidden="hidden";
 }
 
-function show_answer() {
-	document.getElementById('answer').hidden="";
+function show_answer(num) {
+	document.getElementById('a' + num.toString()).hidden="";
 }
 
 function show_questions() {
@@ -42,14 +41,17 @@ function show_questions() {
 
 function get_rand_questions(num) {
 	// alert(num);
-	numbers = "";
-	tmp = num;
+	// numbers = "";
+	tmp = 0;
 	len = qa_repo.length;
 	for (var i = 0; i < len; ++i) {
-		if ((Math.random() * 1000) % (len - i) < tmp) {
-			numbers += i.toString() + " ";
-			tmp--;
+		if ((Math.random() * 1000) % (len - i) < num) {
+			tmp++;
+			document.getElementById("q" + tmp.toString()).innerText = qa_repo[i][0];
+			document.getElementById("a" + tmp.toString()).innerText = qa_repo[i][1];
+			// numbers += i.toString() + " ";
+			num--;
 		}
 	}
-	document.getElementById('random_number').innerText = numbers;
+	// document.getElementById('random_number').innerText = numbers;
 }

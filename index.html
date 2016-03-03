@@ -5,16 +5,27 @@
     <title>信科青协·嘉年华</title>
     <script type="text/javascript" src="questions.js"></script>
   </head>
-  <body>
-    <h1>题目</h1>
-    <div id="question">这里是问题</div>
-    <button onclick=change_question()>更换题目</button>
+  <body onload=get_rand_questions(3)>
+    <h1>电脑知识问答</h1>
+    <button onclick=get_rand_questions(3)>更换题目</button>
+    <div class="ques" id="q1"></div>
+    <button onclick=show_answer(1)>显示答案</button>
+    <div class="ans" id="a1" hidden="hidden"></div>
+    <div class="ques" id="q2"></div>
+    <button onclick=show_answer(2)>显示答案</button>
+    <div class="ans" id="a2" hidden="hidden"></div>
+    <div class="ques" id="q3"></div>
+    <button onclick=show_answer(3)>显示答案</button>
+    <div class="ans" id="a3" hidden="hidden"></div>
+
+
+    <!-- <div id="question">这里是问题</div>
+    
     <h2>答案</h2>
     <div id="answer" hidden="hidden">这里是答案</div>
     <button onclick=show_answer()>显示答案</button>
     <button onclick=show_questions()>显示题目</button>
     <div id="qs"></div>
-    <button onclick=get_rand_questions(3)>显示随机数</button>
-    <div id="random_number"></div>
+    <div id="random_number"></div> -->
   </body>
 </html>
