@@ -31,6 +31,16 @@ function show_questions() {
 	document.getElementById('qs').innerText = content;
 }
 
-function get_rand_questions() {
-	
+function get_rand_questions(num) {
+	// alert(num);
+	numbers = "";
+	tmp = num;
+	len = qa_repo.length;
+	for (var i = 0; i < len; ++i) {
+		if ((Math.random() * 1000) % (len - i) < tmp) {
+			numbers += i.toString() + " ";
+			tmp--;
+		}
+	}
+	document.getElementById('random_number').innerText = numbers;
 }
