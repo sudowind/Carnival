@@ -49,6 +49,7 @@ function get_rand_questions(num) {
 			tmp++;
 			document.getElementById("q" + tmp.toString()).innerText = qa_repo[i][0];
 			document.getElementById("a" + tmp.toString()).innerText = qa_repo[i][1];
+			document.getElementById("a" + tmp.toString()).hidden="hidden";
 			// numbers += i.toString() + " ";
 			num--;
 		}
