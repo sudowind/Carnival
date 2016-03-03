@@ -47,7 +47,7 @@ function get_rand_questions(num) {
 	for (var i = 0; i < len; ++i) {
 		if ((Math.random() * 1000) % (len - i) < num) {
 			tmp++;
-			document.getElementById("q" + tmp.toString()).innerText = qa_repo[i][0];
+			document.getElementById("q" + tmp.toString()).innerText = tmp.toString() + '.\t' + qa_repo[i][0];
 			document.getElementById("a" + tmp.toString()).innerText = qa_repo[i][1];
 			document.getElementById("a" + tmp.toString()).hidden="hidden";
 			// numbers += i.toString() + " ";

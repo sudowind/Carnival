@@ -4,19 +4,26 @@
     <meta charset='utf-8'>
     <title>信科青协·嘉年华</title>
     <script type="text/javascript" src="questions.js"></script>
+    <link rel="stylesheet" type="text/css" href="basic.css">
   </head>
   <body onload=get_rand_questions(3)>
-    <h1>电脑知识问答</h1>
+    <h1 id="title_name">电脑知识问答</h1>
     <button onclick=get_rand_questions(3)>更换题目</button>
-    <div class="ques" id="q1"></div>
-    <button onclick=show_answer(1)>显示答案</button>
-    <div class="ans" id="a1" hidden="hidden"></div>
-    <div class="ques" id="q2"></div>
-    <button onclick=show_answer(2)>显示答案</button>
-    <div class="ans" id="a2" hidden="hidden"></div>
-    <div class="ques" id="q3"></div>
-    <button onclick=show_answer(3)>显示答案</button>
-    <div class="ans" id="a3" hidden="hidden"></div>
+    <div class="qa_block">
+      <div class="ques" id="q1"></div>
+      <button onclick=show_answer(1)>显示答案</button>
+      <div class="ans" id="a1" hidden="hidden"></div>
+    </div>
+    <div class="qa_block">
+      <div class="ques" id="q2"></div>
+      <button onclick=show_answer(2)>显示答案</button>
+      <div class="ans" id="a2" hidden="hidden"></div>
+    </div>
+    <div class="qa_block">
+      <div class="ques" id="q3"></div>
+      <button onclick=show_answer(3)>显示答案</button>
+      <div class="ans" id="a3" hidden="hidden"></div>
+    </div>
 
 
     <!-- <div id="question">这里是问题</div>
